@@ -1,0 +1,38 @@
+Currently I need to do things in this order:
+
+1. node app.js (server)  
+2. browser  localhost:5000 
+3. node test.js 
+
+#+BEGIN_SRC sh :results value verbatim 
+
+echo 'digraph server {
+        rankdir=TB;
+        node [shape = circle];
+        testjs -> appjs   [label = "graph"]
+        testjs -> appjs   [label = "event"]
+        appjs  -> browser [label = "graph"]
+        appjs  -> browser [label = "event"]
+}' | graph-easy
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+          +---------+
+          | testjs  | -+
+          +---------+  |
+            |          |
+            | graph    | event
+            v          |
+          +---------+  |
+  +------ |  appjs  | <+
+  |       +---------+
+  |         |
+  | event   | graph
+  |         v
+  |       +---------+
+  +-----> | browser |
+          +---------+
+#+end_example
+
+

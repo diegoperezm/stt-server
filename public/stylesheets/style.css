@@ -1,0 +1,43 @@
+html {
+ box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  border:     3px solid black;
+  margin:     1% auto; 
+  width:      150vh;
+   
+}
+
+.content {}
+
+.graph{
+  height:   90vh;
+  width:   149vh;  
+}
+
+.svgGraph {
+  height:  100vh;
+  width:   149vh;  
+ }
+
+
+.node rect {
+  stroke: #333;
+  fill: #fff;
+}
+
+.edgePath path {
+  stroke: #333;
+  fill: #333;
+  stroke-width: 3px;
+}
+
+.active {
+  stroke: red!important; 
+}
+
