@@ -4,7 +4,7 @@ Currently I need to do things in this order:
 2. browser  localhost:5000 
 3. node test.js 
 
-#+BEGIN_SRC sh :results value verbatim 
+#+BEGIN_SRC sh :results value verbatim  :exports both
 
 echo 'digraph server {
         rankdir=TB;
